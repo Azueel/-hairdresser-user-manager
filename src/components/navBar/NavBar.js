@@ -10,13 +10,13 @@ export const Navbar = () => {
 
 			<div className="navbar-collapse">
 				<div className="navbar-nav">
-					<a className="nav-item nav-link" exact href="/afiliados">
+					<NavLink className="nav-item nav-link" exact to="/afiliados">
 						Afiliados
-					</a>
+					</NavLink>
 
-					<a className="nav-item nav-link" exact href="/deudores">
+					<NavLink className="nav-item nav-link" exact to="/deudores">
 						Deudores
-					</a>
+					</NavLink>
 				</div>
 			</div>
 

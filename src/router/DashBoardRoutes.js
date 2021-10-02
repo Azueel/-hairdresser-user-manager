@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Switch, Route, Redirect } from 'react-router-dom';
 import { ListaAfiliados } from '../components/Afiliados/ListaAfiliados';
 import { ListaDeudores } from '../components/deudores/ListaDeudores';
 import { InfoPersonal } from '../components/info Personas/InfoPersonal';
@@ -16,6 +16,8 @@ export const DashBoardRoutes = () => {
 					<Route exact path="/afiliados" component={ListaAfiliados} />
 					<Route exact path="/info/:infoId" component={InfoPersonal} />
 					<Route exact path="/deudores" component={ListaDeudores} />
+
+					<Redirect to="afiliados" />
 				</Switch>
 			</div>
 		</>

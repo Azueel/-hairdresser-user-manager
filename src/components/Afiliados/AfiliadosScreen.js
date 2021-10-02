@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const AfiliadosScreen = ({ usuario, handleDeleteUser }) => {
+export const AfiliadosScreen = ({ usuario, handleDeleteUser, handleEditUser }) => {
 	return (
 		<>
 			<tr>
@@ -11,7 +11,12 @@ export const AfiliadosScreen = ({ usuario, handleDeleteUser }) => {
 				<td className="py-4">{usuario.fechaNacimiento}</td>
 				<td className="py-4">{usuario.dni}</td>
 				<td>
-					<button className="btn btn-outline-success my-3">Modificar</button>
+					<button
+						onClick={() => handleEditUser(usuario)}
+						className="btn btn-outline-success my-3"
+					>
+						Modificar
+					</button>
 				</td>
 				<td>
 					<button

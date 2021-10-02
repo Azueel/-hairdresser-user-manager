@@ -26,7 +26,6 @@ export const FormScreen = ({ crearUsuario, setViewForm }) => {
 	};
 
 	//cuando el usuario presion agregar
-
 	const handleSubmit = (e) => {
 		e.preventDefault();
 

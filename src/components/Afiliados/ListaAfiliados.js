@@ -37,6 +37,12 @@ export const ListaAfiliados = () => {
 		});
 	};
 
+	//editar Usuario
+	const handleEditUser = (usuario) => {
+		setViewForm(true);
+		console.log(usuario);
+	};
+
 	return (
 		<>
 			<div className="row ">
@@ -56,9 +62,11 @@ export const ListaAfiliados = () => {
 					) : null}
 				</div>
 				<div className="col-lg-9 ">
+					<div></div>
 					<h1 className="pt-5 pb-5 ps-4 bgPrincipal text-white fs-2">
 						Hola <span className="fw-bold">Alejo</span>
 					</h1>
+
 					<div className="gris p-3 vh-100">
 						<table className="table">
 							<thead>
@@ -84,6 +92,7 @@ export const ListaAfiliados = () => {
 										key={usuario.id}
 										usuario={usuario}
 										handleDeleteUser={handleDeleteUser}
+										handleEditUser={handleEditUser}
 									/>
 								))}
 							</tbody>
